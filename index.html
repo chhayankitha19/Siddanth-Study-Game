@@ -3,29 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siddanth Study Game</title>
+    <title>Siddanth's Study Quest</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        .level { margin: 20px; padding: 10px; border: 2px solid black; display: inline-block; }
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background-color: #191970; 
+            color: white; 
+            margin: 0; 
+            padding: 0;
+        }
+        h1 { 
+            padding: 20px; 
+            background-color: #000033; 
+            margin: 0;
+        }
+        .level-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .level { 
+            margin: 15px; 
+            padding: 20px; 
+            border: 2px solid white; 
+            background-color: #000044; 
+            border-radius: 15px; 
+            width: 200px; 
+            text-align: center; 
+            cursor: pointer; 
+            transition: 0.3s;
+        }
+        .level:hover {
+            background-color: #3333aa;
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to Siddanth's Study Game</h1>
-    <h2>Company Law & LLP Act - Levels</h2>
-    <div id="levels"></div>
-    <script>
-        let chapters = [
-            "Introduction to Company Law", "Types of Companies", "Incorporation of Companies", 
-            "MOA & AOA", "Share Capital & Debentures", "Directors & Meetings", "LLP Act Overview"
-        ];
-        
-        let levelsDiv = document.getElementById("levels");
-        chapters.forEach((chapter, index) => {
-            let level = document.createElement("div");
-            level.className = "level";
-            level.innerHTML = `<h3>Level ${index + 1}</h3><p>${chapter}</p>`;
-            levelsDiv.appendChild(level);
-        });
-    </script>
+    <h1>Welcome to Siddanth's Study Quest</h1>
+    <h2>Select a Level</h2>
+    <div class="level-container">
+        <div class="level" onclick="alert('Start Level 1: Introduction to Company Law')"><h3>Level 1</h3><p>Introduction to Company Law</p></div>
+        <div class="level" onclick="alert('Start Level 2: Types of Companies')"><h3>Level 2</h3><p>Types of Companies</p></div>
+        <div class="level" onclick="alert('Start Level 3: Incorporation of Companies')"><h3>Level 3</h3><p>Incorporation of Companies</p></div>
+        <div class="level" onclick="alert('Start Level 4: MOA & AOA')"><h3>Level 4</h3><p>MOA & AOA</p></div>
+        <div class="level" onclick="alert('Start Level 5: Share Capital & Debentures')"><h3>Level 5</h3><p>Share Capital & Debentures</p></div>
+        <div class="level" onclick="alert('Start Level 6: Directors & Meetings')"><h3>Level 6</h3><p>Directors & Meetings</p></div>
+        <div class="level" onclick="alert('Start Level 7: LLP Act Overview')"><h3>Level 7</h3><p>LLP Act Overview</p></div>
+    </div>
 </body>
 </html>
