@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siddanth's Gamified Study</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Siddanth Study Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .level { margin: 20px; padding: 10px; border: 2px solid black; display: inline-block; }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome Sir Siddanth!</h1>
-        <p>Complete the tasks to unlock the next level!</p>
-        <div id="levels"></div>
-    </div>
-    <script src="script.js"></script>
+    <h1>Welcome to Siddanth's Study Game</h1>
+    <h2>Company Law & LLP Act - Levels</h2>
+    <div id="levels"></div>
+    <script>
+        let chapters = [
+            "Introduction to Company Law", "Types of Companies", "Incorporation of Companies", 
+            "MOA & AOA", "Share Capital & Debentures", "Directors & Meetings", "LLP Act Overview"
+        ];
+        
+        let levelsDiv = document.getElementById("levels");
+        chapters.forEach((chapter, index) => {
+            let level = document.createElement("div");
+            level.className = "level";
+            level.innerHTML = `<h3>Level ${index + 1}</h3><p>${chapter}</p>`;
+            levelsDiv.appendChild(level);
+        });
+    </script>
 </body>
 </html>
